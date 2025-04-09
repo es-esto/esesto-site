@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@1,900&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #323232;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    margin: 20px 0 0 50px;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 0 30px 50px;
+}
+
+.contenedor {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont2,
+.cont3,
+.cont4,
+.cont5,
+.cont6 {
+    display: flex;
+    justify-content: center;
+}
+
+.narrowHidden{
+    display: none;
+}
+
+.blockContainer {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    /* max-width: 95%; */
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* Optional: Ensure it wraps properly for smaller screens */
+}
+
+.img_wide {
+    max-width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.block {
+    flex: 1; /* Take up equal space with blockImg */
+    max-width: 50%; /* Limit to 50% width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    margin: 0; /* Remove extra margins */
+}
+
+/* / / / / / / / / / / */
+
+/* Styles for the dropdown button */
+.dropdown-btn {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    gap: 10px; /* Adds spacing between text and image */
+    background-color: #f0e335;
+    color: #323232;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dropdown-btn img {
+    width: 16px; /* Adjust image size */
+    height: auto;
+}
+
+
+.dropdown-btn:hover {
+    background-color: #cbff88;
+}
+
+/* Hidden text-box by default */
+.text-box {
+    max-height: 0; /* Start fully collapsed */
+    overflow: hidden; /* Prevents content from being visible */
+    background: #f8f8f8; /* Light background */
+    padding: 0 15px; /* Ensure no padding when collapsed */
+    border-radius: 8px;
+    border-left: 5px solid #b3ed00;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.4s ease-out, padding 0.3s ease-out; /* Smooth transition */
+}
+
+/* Expanded state */
+.text-box.show {
+    max-height: 500px; /* Adjust as needed */
+    padding: 15px 15px 20px; /* Top, Left/Right, and increased Bottom padding */
+}
+
+
+
+.text-box p {
+    margin-bottom: 15px; /* Adds spacing between sections */
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.text-box ul {
+    padding-left: 20px;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.text-box ul li {
+    margin-bottom: 8px; /* Adjust spacing between bullet points */
+}
+
+.text-box hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+
+/* / / / / / / / / / / */
+
+.txt {
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    /* margin: 20px; */
+    padding: 0 0 0 30px;
+    max-width: 80%;
+    /* margin-bottom: 32px; */
+}
+
+.txt h3 {
+    font-size: 1.8em;
+}
+
+.blockImg {
+    flex: 1; /* Take up equal space with block */
+    max-width: 50%; /* Limit to 50% width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    margin: 0; /* Remove extra margins */
+    display: flex; /* Ensure the image can align properly */
+    justify-content: center; /* Center align the image */
+    align-items: center; /* Center align the image vertically */
+}
+
+.imgSide {
+    max-width: 40%; /* Make the image responsive to its container */
+    height: auto; /* Keep the aspect ratio */
+    display: block; /* Remove extra spacing below the image */
+    margin: auto; /* Center align horizontally if needed */
+    padding: 40px 0 20px 0;
+}
+
+.txtWip {
+    margin: 20px 60px;
+    max-width: 32%;
+    /* background-color: rgba(240, 227, 53, .5); */
+    /* padding: 40px; */
+}
+
+.txtWip h2, h3{
+    padding: 0;
+    margin: 0;
+}
+
+.h1textWip{
+    font-size: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}
+
+.h2textWip {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 900;
+    animation: fadeIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.txtWip h3 {
+    font-size: 1.6rem;
+    font-weight: 100;
+    animation: fadeIn 1.8s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.txtWip p {
+    animation: fadeIn 3s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.blockWip {
+    display: flex;
+    justify-content: center;
+    margin: 80px 20px;
+}
+
+.txt img {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+}
+
+p{
+    font-size: 1.12em;
+    line-height: 1.4em;
+    color: #323232;
+}
+
+.img1 {
+    margin: 20px;
+    max-width: 46%;
+}
+
+.arrow {
+    margin: 35px 0 0 50px;
+    max-width: 100%;
+}
+
+.projectBtn{
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    padding: 60px 0 60px 0;
+}
+
+.btn {
+    /* width: 130px; */
+    text-align: center;
+    background-color: #f0e335;
+    border-radius: 8px;
+    color: #323232;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-weight: 100;
+    /* font-size: 0.9em; */
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #cbff88;
+}
+
+
+/* ///////////////////////MEDIA QUERY/////////////////////// */
+
+
+@media only screen and (max-width: 1340px) {
+    .blockContainer {
+        flex-direction: column;
+    }
+    
+    .block {
+        max-width: 80%;
+        margin: 0 auto; 
+        padding: 0 0 50px 0;       
+    }
+    
+    .txt {
+        max-width: 100%;
+        padding: 30px 50px 30px 30px;
+    }
+
+    .blockImg {
+        max-width: 80%; /* Centered and responsive */
+        display: flex; /* To align the image inside */
+        justify-content: center; /* Center horizontally */
+        margin: 0 auto; /* Center blockImg itself */
+    }
+
+    .imgSide {
+        max-width: 100%; /* Ensure the image remains responsive */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any spacing around the image */
+        margin: auto; /* Center image within the container */
+    }
+}
+
+
+/* ////////// @media only screen and (max-width: 1117px) {
+
+} */
+
+
+@media only screen and (max-width: 960px) {
+
+    .header {
+        width: 90%;
+        margin: auto;
+        padding: 0 10px 10px 10px;
+    }
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    .contenedor {
+        width: 100%;
+        align-items: center;
+    }
+
+    .cont2,
+    .cont3,
+    .cont4,
+    .cont5,
+    .cont6 {
+        max-width: 80%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .cont2 {
+        max-width: 100%;
+    }
+
+    .wideHidden{
+        display: none;
+    }
+
+    .narrowHidden{
+        display: flex;
+        padding: 0;
+    }
+
+    .block {
+        max-width: 100%; 
+        margin: 0;      
+    }
+
+    .text-box {
+        max-width: 100%;
+        margin: 20px 0 0 0;
+    }
+
+    .blockContainer{
+        margin: 0;
+        width: 90%;
+    }
+
+    .txt {
+        padding: 0 0 30px 0;
+    }
+
+    .txt p{
+        font-size: 1rem;
+    }
+
+    .circle{
+        padding: 0 0 10px 0;
+    }
+
+    .img_wide {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .img1 {
+        max-width: 100%;
+            margin: 0;
+            padding: 10px 0;
+    }
+
+    .blockImg{
+        margin: auto;
+    }
+
+    .blockWip {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 20px 40px 20px;
+    }
+
+    .txtWip {
+        margin: 20px 40px;
+        max-width: 80%;
+    }
+
+    .txtWip h1, h2{
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    .arrow {
+        margin: 0 0 0 20px;
+        width: 20px;
+    }
+
+    h1, h2  {
+        font-size: 2.4em;
+        width: 90%;
+    }
+
+    .txt {
+        padding: 0 15px 0 0;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        margin: 25px;
+    }
+
+    .narrowHidden, .img1 {
+        padding: 20px 0 0 0;
+    }
+
+    .blockWip {
+        margin: 10px 20px 40px 10px;
+    }
+    
+    .txtWip {
+        margin: 10px 20px 40px 10px;
+        max-width: 90%;
+    }
+
+    .txtWip h1, h2{
+        font-size: 1.6rem;
+    }
+
+    .projectBtn{
+        padding: 20px 0 30px 0;
+    }
+}

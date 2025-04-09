@@ -1,0 +1,38 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen PDF viewer */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0; /* Remove extra spacing */
+}
+
+/* Make the PDF take up full space */
+.pdf-viewer {
+    width: 90vw; /* 90% of the viewport width */
+    height: 95vh; /* 95% of the viewport height */
+    border: none; /* Remove default border */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pdf-viewer {
+        width: 95vw; /* Expand more on smaller screens */
+        height: 90vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-viewer {
+        width: 100vw; /* Use full width on mobile */
+        height: 85vh; /* Slightly smaller height */
+    }
+}

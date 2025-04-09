@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>BROCHA</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>BROCHA</h1>
+        <h2> / app</h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <p><b>Project Role:</b><br>Product Designer - UX/UI</p>
+                    <hr>
+                    <p><b>Goal:</b><br>To design an engaging app that inspires users to learn about Latin American
+                        plastic artists while fostering creativity and playfulness.</p>
+                    <hr>
+                    <p><b>Process:</b></p>
+                    <ul>
+                        <li>Conducted research on user interaction with art education platforms.</li>
+                        <li>Developed user personas and journey maps.</li>
+                        <li>Facilitated usability testing to refine game-like features.</li>
+                        <li>Designed a vibrant visual identity inspired by Latin American art.</li>
+                    </ul>
+                    <hr>
+                    <p><b>Outcome:</b><br>Brocha successfully combines education and entertainment, offering an
+                        immersive experience that highlights the richness of Latin American art. The app's design is
+                        intuitive, playful, and visually striking, inviting users to explore and learn while
+                        enjoying the expressiveness of the pictorial world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="imgSide" src="images/app/brocha/brocha01.gif" alt="Broch-02">
+    </div>
+
+    <div class="cont4">
+        <img class="img_wide" src="images/app/brocha/brocha02.jpg" alt="Broch-02">
+    </div>
+
+    <div class="cont4">
+        <img class="img_wide" src="images/app/brocha/brocha03.jpg" alt="Broch-03">
+    </div>
+
+    </div>
+    <div class="projectBtn">
+        <a href="https://www.behance.net/gallery/100296091/BROCHA" target="_blank" class="btn">Full project</a>
+    </div>
+</body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+</script>
+
+
+
+</html>

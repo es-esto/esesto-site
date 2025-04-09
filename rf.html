@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>R&F</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+        /* / / / / Dropdown / / / / */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>R&F</h1>
+        <h2> / website</h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <p>
+                        <b>Project Role:</b><br> UX/UI Designer
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Goal:</b><br> To design a robust and visually appealing website for R&F, a construction
+                        company,
+                        reflecting their commitment to quality and professionalism. The goal was to create a cohesive
+                        platform
+                        that highlights their projects and services while establishing a strong and dynamic
+                        communication framework.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Process:</b>
+                    <ul>
+                        <li>Developed a solid and intuitive layout to ensure easy navigation and accessibility for
+                            potential clients.</li>
+                        <li>Carefully selected a professional color palette and typography to convey trust and expertise
+                            in the construction industry.</li>
+                        <li>Designed custom icons and imagery to enhance the visual identity and effectively communicate
+                            R&F’s core values and services.</li>
+                        <li>Conducted usability testing and iterative refinements to align the design with user needs
+                            and the company’s vision.</li>
+                    </ul>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Outcome:</b><br> The website provided R&F with a dynamic and professional digital presence
+                        that
+                        effectively showcases their expertise and projects. The cohesive design combines robust
+                        functionality
+                        with a visually engaging experience, reinforcing their reputation as a leader in the
+                        construction industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="img1" src="images/website/R&F3small.jpg" alt="r&f">
+    </div>
+
+    <div class="projectBtn">
+        <a href="https://rf-construction.netlify.app" target="_blank" class="btn">Visit site</a></p>
+    </div>
+
+</body>
+
+</html>

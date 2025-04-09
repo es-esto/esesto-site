@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>CinchShare</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+        /* / / / / Dropdown / / / / */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>CinchShare</h1>
+        <h2> / website</h2>
+    </div>
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <!-- <br><h3>CinchShare Website Redesign</h3> -->
+                    <p>
+                        <b>Project Role:</b> <br>UX/UI - Researcher/Designer
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Goal:</b> <br>To enhance usability and
+                        create a more appealing, user-friendly experience tailored to CinchShare's core audience: women
+                        in
+                        their 50s and 60s working from home.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Process:</b>
+                    <ul>
+                        <li>Conducted user research to understand the needs and preferences of the target
+                            demographic</li>
+                        <li>Simplified the design layout for better navigation and accessibility</li>
+                        <li>Updated the visual style to reflect a clean, modern aesthetic that resonates with the
+                            brand's audience</li>
+                        <li>Improved mobile responsiveness to cater to on-the-go users</li>
+                    </ul>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Outcome:</b><br>The redesign received positive feedback from the CinchShare
+                        director,
+                        who praised the clean and accessible design. The updated website successfully aligned with
+                        the
+                        brand's goals, offering an intuitive platform that empowered its users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="img1 wideHidden" src="images/website/cinchshare01.jpg" alt="cinchshare02">
+    </div>
+
+    <div class="cont3 narrowHidden">
+        <img class="img1" src="images/website/cinchshare/cinchshare01small.jpg" alt="sign up image">
+    </div>
+
+    <div class="cont4 wideHidden">
+        <img class="img_wide" src="images/website/cinchshare02.jpg" alt="THERAPHY-04">
+    </div>
+
+    <div class="cont3 narrowHidden">
+        <img class="img1" src="images/website/cinchshare/cinchshare03.jpg" alt="qualitative1">
+        <img class="img1" src="images/website/cinchshare/cinchshare04.jpg" alt="qualitative2">
+    </div>
+
+    <div class="cont4 wideHidden">
+        <img class="img_wide" src="images/website/cinchshare/Signup.png" alt="THERAPHY-04">
+    </div>
+
+    <div class="cont3 narrowHidden">
+        <img class="img1" src="images/website/cinchshare/Signup-2.png" alt="sign up image">
+    </div>
+
+    <div class="projectBtn"><a href="https://www.behance.net/gallery/210219117/PRIME-PALS" target="_blank"
+            class="btn">Full
+            project</a>
+    </div>
+
+    </div>
+</body>
+
+</html>

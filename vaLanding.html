@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>vegan market</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+        /* / / / / Dropdown / / / / */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>vegan market</h1>
+        <h2> / website</h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <p>
+                        <b>Project Role:</b><br> UX/UI - Researcher/Designer
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Goal:</b><br> To design a clean and effective landing page for the Vegan Market app, aimed at
+                        recruiting vegan companies and producers while showcasing the platform's mission of connecting
+                        the
+                        vegan community. The goal was to create a simple yet impactful interface that fosters
+                        collaboration
+                        and growth.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Process:</b>
+                    <ul>
+                        <li>Conducted research to understand the needs of vegan businesses and how they interact with
+                            digital platforms.</li>
+                        <li>Designed an intuitive and visually appealing landing page that highlights the app's purpose
+                            and value proposition.</li>
+                        <li>Incorporated user feedback to refine the layout, ensuring clarity and accessibility for
+                            diverse audiences.</li>
+                        <li>Created a cohesive visual style aligned with the Vegan Market branding, emphasizing
+                            sustainability and inclusivity.</li>
+                    </ul>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Outcome:</b><br> The landing page serves as an effective tool for attracting and onboarding
+                        vegan companies and producers, contributing to the growth of the Vegan Market project. Its
+                        design
+                        balances simplicity and functionality, providing a seamless experience that reflects the app's
+                        mission of supporting the vegan community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="img1" src="images/website/vmlanding01flip.jpg" alt="teratrue2">
+    </div>
+
+    <div class="cont4">
+        <img class="img_wide" src="images/website/vmlanding02 copy.jpg" alt="THERAPHY-02">
+    </div>
+
+    <div class="cont3">
+        <!-- <img class="img1" src="images/website/vmlanding/vmlanding02.jpg" alt="THERAPHY-02"> -->
+        <img class="img_wide" src="images/website/vmlanding/vmlanding03e.png" alt="THERAPHY-03">
+    </div>
+
+    </div>
+    <div class="projectBtn">
+        <a href="https://vegan-market.netlify.app" target="_blank" class="btn">Visit site</a>
+    </div>
+</body>
+
+</html>

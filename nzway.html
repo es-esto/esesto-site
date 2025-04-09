@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>NZway</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+        /* / / / / Dropdown / / / / */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>NZway</h1>
+        <h2> / website</h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <p>
+                        <b>Project Role:</b><br> UX/UI Designer
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Goal:</b><br> To design a stylish and stable website for NZWay, an immigration consulting
+                        firm based
+                        in Wellington, New Zealand. The goal was to create a professional digital presence that reflects
+                        the
+                        company's approach to guidance and support while maintaining a visually dynamic and engaging
+                        experience.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Process:</b>
+                    <ul>
+                        <li>Designed a clean and intuitive layout to ensure easy navigation for users seeking
+                            immigration consulting services.</li>
+                        <li>Developed a cohesive visual identity that combines typographic rhythm with dynamic forms to
+                            reflect the brand's professionalism and approachability.</li>
+                        <li>Selected a modern color palette and typography to convey trust and stability.</li>
+                        <li>Conducted usability testing to refine the design and ensure it met the needs of NZWay's
+                            diverse clientele.</li>
+                    </ul>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Outcome:</b><br> The NZWay website provides a professional and engaging digital platform that
+                        effectively
+                        communicates the company's values and services. The balanced design showcases stability and
+                        dynamism,
+                        supporting users on their immigration journey with clarity and confidence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="img1" src="images/website/nzway01.jpg" alt="NZway2">
+    </div>
+
+    <div class="cont3">
+        <img class="img1" src="images/website/nzway03.jpg" alt="THERAPHY-02">
+        <img class="img1" src="images/website/nzway02.jpg" alt="THERAPHY-03">
+    </div>
+
+    </div>
+    <div class="projectBtn">
+        <a href="https://nzway.co.nz" target="_blank" class="btn">Visit site</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>teratrue</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+                /* / / / / Dropdown / / / / */
+
+                document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>teratrue</h1>
+        <h2> / app</h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+                    <div class="text-box">
+                        <div class="circle">
+                            <img src="images/pages/circle.png" alt="circle">
+                        </div>
+                        <p>
+                            <b>Project Role:</b><br>Product Designer - UX/UI</p>
+                        <hr>
+                        <p>
+                            <b>Goal:</b><br> To design a mobile app that celebrates and showcases the richness of underground writers, 
+                            providing users with a tangible, nostalgic experience inspired by the warmth and textures of the analog world. 
+                            The goal was to create an engaging platform that feels both modern and timeless.
+                        </p>
+                        <hr>
+                        <p>
+                            <b>Process:</b>
+                            <ul>
+                                <li>Conducted user interviews to explore how readers discover and connect with underground literature.</li>
+                                <li>Developed personas and journey maps to understand the needs of literary enthusiasts seeking unique voices and experiences.</li>
+                                <li>Facilitated usability testing to refine the app's interface and ensure it delivered a seamless and immersive experience.</li>
+                                <li>Designed a visual identity that evokes retro nostalgia, incorporating textures and warmth reminiscent of the analog era.</li>
+                            </ul>
+                        </p>
+                        <hr>
+                        <p>
+                            <b>Outcome:</b><br> Teratrue provides a unique platform that bridges the digital and analog worlds, 
+                            offering an inviting space for users to explore underground literature. The app's design captures 
+                            the richness of tactile nostalgia while maintaining a sleek and user-friendly interface, inviting 
+                            readers to discover and enjoy the variety of writers often overlooked.
+                        </p>
+                    </div>                
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="img1" src="images/pages/tera01.jpg" alt="teratrue2">
+    </div>
+
+    <div class="cont4">
+        <img class="img_wide" src="images/pages/tera02.gif" alt="THERAPHY-02">
+    </div>
+
+    <div class="cont3">
+        <img class="img1" src="images/pages/tera03.jpg" alt="THERAPHY-02">
+        <img class="img1" src="images/pages/tera04.jpg" alt="THERAPHY-03">
+    </div>
+
+    <div class="cont4">
+        <img class="img1" src="images/pages/tera05a.jpg" alt="THERAPHY-02">
+        <img class="img1" src="images/pages/tera05b.jpg" alt="THERAPHY-02">
+    </div>
+
+    </div>
+
+    <div class="projectBtn">
+        <a href="https://www.behance.net/gallery/141810467/teratrue" target="_blank" class="btn">Full
+            project</a>
+    </div>
+
+</body>
+
+</html>

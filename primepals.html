@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pages-style.css">
+    <link rel="icon" type="image/png" href="images/esesto32px.png" />
+    <title>primepals</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPTR72QZQD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPTR72QZQD');
+
+        /* / / / / Dropdown / / / / */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const textBox = document.querySelector(".text-box");
+            const dropArrow = dropdownBtn.querySelector("img"); // Select the <img> inside the button
+
+            dropdownBtn.addEventListener("click", function () {
+                if (textBox.style.maxHeight) {
+                    // Collapse
+                    textBox.style.maxHeight = null;
+                    textBox.style.padding = "0 15px";
+                    dropdownBtn.innerHTML = 'Show Project Details <img src="images/dropArrowDown.png" alt="Arrow">';
+                } else {
+                    // Expand
+                    textBox.style.maxHeight = textBox.scrollHeight + 20 + "px";
+                    textBox.style.padding = "15px 15px 20px";
+                    dropdownBtn.innerHTML = 'Hide Project Details <img src="images/dropArrowUp.png" alt="Arrow">';
+                }
+            });
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <a href="index.html#work"><img class="arrow" src="images/arrow.png" alt="arrow"></a>
+    <div class="header">
+        <h1>PRIME PALS</h1>
+        <h2> / app </h2>
+    </div>
+
+    <div class="contenedor">
+        <div class="cont2">
+            <div class="blockContainer">
+                <button class="dropdown-btn">Show Project Details
+                    <img src="images/dropArrowDown.png" alt="">
+                </button>
+
+                <div class="text-box">
+                    <div class="circle">
+                        <img src="images/pages/circle.png" alt="circle">
+                    </div>
+                    <p>
+                        <b>Project Role:</b><br> Product Designer - UX/UI
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Goal:</b><br> To design a user-friendly app that fosters meaningful connections and
+                        organizes activities for adults aged 60+, focusing on inclusivity and accessibility.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Process:</b>
+                    <ul>
+                        <li>Conducted in-depth user interviews and surveys to uncover the needs, preferences, and
+                            challenges faced by the target audience.</li>
+                        <li>Developed detailed user personas and journey maps to guide the design process.</li>
+                        <li>Facilitated usability testing to identify pain points and refine key features.</li>
+                        <li>Designed a clean, accessible UI that prioritizes readability, ease of navigation, and a
+                            welcoming experience for older adults.</li>
+                        <li>Collaborated on branding to create a cohesive and engaging visual identity.</li>
+                    </ul>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Outcome:</b><br> The research provided valuable insights into the preferences of older
+                        adults, leading to a UI that balances functionality with an inviting aesthetic. The app
+                        concept successfully promotes connection, ease of use, and active participation through an
+                        intuitive and user-centered interface.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <img class="imgSide" src="images/app/primePals/primePals01.png" alt="primepals02">
+    </div>
+
+    <div class="cont4 wideHidden">
+        <img class="img_wide" src="images/app/primePals/qualitative0.png" alt="primepals03">
+    </div>
+
+    <div class="cont3 narrowHidden">
+        <img class="img1" src="images/app/primePals/qualitative1.png" alt="qualitative1">
+        <img class="img1" src="images/app/primePals/qualitative2.png" alt="qualitative2">
+    </div>
+
+    <div class="cont3">
+        <img class="img1" src="images/app/primePals/primePals4.png" alt="primepals04">
+        <img class="img1" src="images/app/primePals/primePals5.png" alt="primepals05">
+    </div>
+
+    <!-- <div class="cont4">
+            <img class="img1" src="images/pages/tera05a.jpg" alt="THERAPHY-02">
+            <img class="img1" src="images/pages/tera05b.jpg" alt="THERAPHY-02">
+        </div> -->
+
+    <div class="projectBtn"><a href="https://www.behance.net/gallery/216432989/Prime-Pals" target="_blank"
+            class="btn">Full
+            project</a>
+    </div>
+
+</body>
+
+</html>
