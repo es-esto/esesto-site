@@ -42,62 +42,57 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', checkScroll);
 
 
-    // TOOLTIP ON SCROLL
-    // ✅ Console message for debugging
-console.log("✅ JS is loaded");
-
-// 📍 This runs after the DOM is ready
-document.addEventListener("DOMContentLoaded", function () {
-    const tooltip = document.getElementById('tooltip');
-    const steps = document.querySelectorAll('.step');
-
-    function revealTooltipIfVisible() {
-        let tooltipShown = false;
-
-        for (const step of steps) {
-            const rect = step.getBoundingClientRect();
-            const stepMidY = rect.top + rect.height / 2;
-            const isInView = stepMidY > 0 && stepMidY < window.innerHeight;
-
-            if (isInView && !tooltipShown) {
-                const scrollTop = window.scrollY || document.documentElement.scrollTop;
-                const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-
-                const tooltipText = step.getAttribute('data-info');
-                tooltip.textContent = tooltipText;
-
-                // Make tooltip temporarily visible to measure size
-                tooltip.style.opacity = 0;
-                tooltip.style.display = 'block';
-                tooltip.style.left = '0';
-
-                void tooltip.offsetWidth; // force reflow
-
-                const tooltipWidth = tooltip.offsetWidth;
-                const tooltipHeight = tooltip.offsetHeight;
-
-                const top = rect.top + scrollTop + (rect.height - tooltipHeight) / 2;
-                const left = rect.right + scrollLeft + 20; // 20px to the right
-
-                tooltip.style.top = `${top}px`;
-                tooltip.style.left = `${left}px`;
-                tooltip.style.opacity = 1;
-                tooltip.style.transform = 'translateY(0)';
-
-                tooltipShown = true;
-                break;
+    document.addEventListener("DOMContentLoaded", function () {
+        const tooltip = document.getElementById("tooltip");
+        const steps = document.querySelectorAll(".step");
+    
+        function revealTooltipIfVisible() {
+            let foundVisible = false;
+    
+            for (const step of steps) {
+                const rect = step.getBoundingClientRect();
+                const stepMidY = rect.top + rect.height / 2;
+                const inView = stepMidY >= window.innerHeight * 0.2 && stepMidY <= window.innerHeight * 0.8;
+    
+                if (inView && !foundVisible) {
+                    foundVisible = true;
+    
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+    
+                    const tooltipText = step.getAttribute("data-info");
+                    tooltip.textContent = tooltipText;
+    
+                    // Show tooltip and measure
+                    tooltip.style.display = "block";
+                    tooltip.style.opacity = "0";
+                    tooltip.style.left = "0px";
+                    void tooltip.offsetWidth; // Force reflow
+    
+                    const tooltipHeight = tooltip.offsetHeight;
+                    const tooltipWidth = tooltip.offsetWidth;
+    
+                    const top = rect.top + scrollTop + rect.height / 2 - tooltipHeight / 2;
+                    const left = rect.left + scrollLeft + rect.width + 16;
+    
+                    tooltip.style.top = `${top}px`;
+                    tooltip.style.left = `${left}px`;
+                    tooltip.style.opacity = "1";
+                    tooltip.style.transform = "translateY(0)";
+                    break;
+                }
+            }
+    
+            if (!foundVisible) {
+                tooltip.style.opacity = "0";
+                tooltip.style.left = "-9999px";
             }
         }
-
-        if (!tooltipShown) {
-            tooltip.style.opacity = 0;
-            tooltip.style.left = '-9999px';
-        }
-    }
-
-    window.addEventListener('scroll', revealTooltipIfVisible);
-    revealTooltipIfVisible(); // trigger on page load
-});
+    
+        window.addEventListener("scroll", revealTooltipIfVisible);
+    });
+    
+      
 
     
 

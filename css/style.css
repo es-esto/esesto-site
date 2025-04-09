@@ -356,17 +356,10 @@ body {
 	white-space: nowrap;
 	pointer-events: none;
 	z-index: 1000;
-  
 	opacity: 0;
 	transform: translateY(10px);
 	transition: opacity 0.3s ease, transform 0.3s ease;
-	
-  }
-  
-  
-
-
-
+}
 
 
 /*/////////////////////////////	WORK	////////////////////////////////////*/
