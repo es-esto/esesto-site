@@ -277,12 +277,13 @@ body {
 	width: 90%;
 }
 
+
 /* / / / / / INTRO / / / / / */
 
+
 .intro {
-	/* background: url(../images/fondo.png); */
-	background-repeat: no-repeat;
-	height: 100vh;
+	min-height: 100vh;
+	padding: 2.4rem 1.6rem;
 	background-position: center;
 	display: flex;
 	flex-direction: column;
@@ -313,53 +314,50 @@ body {
 	line-height: 1.5em;
 }
 
-/* / / /*/
+/* / / / / / / / / / / / / / / / / / */
 
-.process-wrapper {
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-	margin-top: 10vh;
-	position: relative; /* 👈 This is essential */
-	min-height: 300px;
-}
 
+/* section.spacer {
+	height: 100vh;
+  } */
   
-.step-list {
+  #root {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
-	position: relative; /* ✅ Make it relative */
+	align-items: center;
+	gap: 50px;
+	padding: 50px 0;
+	height: 100vh;
+	justify-content: center;
   }
   
-  
-  .step {
-	background-color: #ffeb3b;
-	color: #323246;
-	padding: 12px 24px;
-	border-radius: 12px;
-	font-size: 1.4em;
-	font-weight: 900;
-	cursor: pointer;
-	transition: background 0.3s ease;
-	white-space: nowrap;
-  }
-  
-  .tooltip {
-	position: absolute;
-	background-color: #ffeb3b;
-	color: #323246;
-	border-radius: 12px;
-	padding: 12px 20px;
-	font-size: 1rem;
-	font-weight: 500;
-	white-space: nowrap;
-	pointer-events: none;
-	z-index: 1000;
+  .container {
 	opacity: 0;
-	transform: translateY(10px);
-	transition: opacity 0.3s ease, transform 0.3s ease;
-}
+	transform: translateY(40px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	text-align: center;
+  }
+  
+  .container.visible {
+	opacity: 1;
+	transform: translateY(0);
+  }
+  
+  .word {
+	font-size: 1.2rem;
+	font-weight: 900;
+	padding: .8rem 1.6rem;
+	background: #f0e335;
+	border-radius: 10px;
+	color: #323246;
+	display: inline-block;
+  }
+  
+  .description {
+	margin-top: 0.5rem;
+	font-size: 1.2rem;
+	color: #323246;
+  }
 
 
 /*/////////////////////////////	WORK	////////////////////////////////////*/
@@ -374,15 +372,6 @@ body {
     padding: 20px;
     grid-auto-flow: dense;
 }
-
-
-/* Assign specific positions */
-
-/*.bento-item:nth-child(1) { grid-column: span 2; grid-row: span 2; } /* Large */
-/*.bento-item:nth-child(2) { grid-column: span 1; grid-row: span 1; } /* Small */
-/*.bento-item:nth-child(3) { grid-column: span 1; grid-row: span 1; } /* Small */
-/*.bento-item:nth-child(4) { grid-column: span 2; grid-row: span 1; } /* Medium */
-
 
 .bento-item {
     position: relative;

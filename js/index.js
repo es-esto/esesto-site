@@ -40,62 +40,58 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener('scroll', checkScroll);
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const tooltip = document.getElementById("tooltip");
-        const steps = document.querySelectorAll(".step");
-    
-        function revealTooltipIfVisible() {
-            let foundVisible = false;
-    
-            for (const step of steps) {
-                const rect = step.getBoundingClientRect();
-                const stepMidY = rect.top + rect.height / 2;
-                const inView = stepMidY >= window.innerHeight * 0.2 && stepMidY <= window.innerHeight * 0.8;
-    
-                if (inView && !foundVisible) {
-                    foundVisible = true;
-    
-                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-                    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-    
-                    const tooltipText = step.getAttribute("data-info");
-                    tooltip.textContent = tooltipText;
-    
-                    // Show tooltip and measure
-                    tooltip.style.display = "block";
-                    tooltip.style.opacity = "0";
-                    tooltip.style.left = "0px";
-                    void tooltip.offsetWidth; // Force reflow
-    
-                    const tooltipHeight = tooltip.offsetHeight;
-                    const tooltipWidth = tooltip.offsetWidth;
-    
-                    const top = rect.top + scrollTop + rect.height / 2 - tooltipHeight / 2;
-                    const left = rect.left + scrollLeft + rect.width + 16;
-    
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                    tooltip.style.opacity = "1";
-                    tooltip.style.transform = "translateY(0)";
-                    break;
-                }
-            }
-    
-            if (!foundVisible) {
-                tooltip.style.opacity = "0";
-                tooltip.style.left = "-9999px";
-            }
-        }
-    
-        window.addEventListener("scroll", revealTooltipIfVisible);
-    });
-    
-      
-
-    
-
-    window.addEventListener('scroll', revealTooltipIfVisible);
 });
+
+
+// - - - - - - - - - - - - - - INTRO - - - - - - - - - - - - - - - - -
+
+const words = [
+    { word: "Discover", desc: "Understand the problem through research and insights." },
+    { word: "Define", desc: "Identify goals, user needs, and product requirements" },
+    { word: "Ideate", desc: "Sketch ideas, create flows, and wireframes" },
+    { word: "Design", desc: "Build UI components, layouts, and interactive prototypes" },
+    { word: "Test", desc: "Validate with users and gather feedback" },
+    { word: "Deliver", desc: "Prepare handoff with design specs and assets" },
+    { word: "Refine", desc: "Iterate and improve based on results and feedback" }
+  ];
   
+  const root = document.getElementById('root');
+  
+  words.forEach(item => {
+    const container = document.createElement('div');
+    container.classList.add('container');
+  
+    const wordDiv = document.createElement('div');
+    wordDiv.classList.add('word');
+    wordDiv.innerText = item.word;
+  
+    const desc = document.createElement('div');
+    desc.classList.add('description');
+    desc.innerText = item.desc;
+  
+    container.appendChild(wordDiv);
+    container.appendChild(desc);
+    root.appendChild(container);
+  });
+  
+  const revealContainers = document.querySelectorAll('.container');
+  
+  function handleScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+  
+    revealContainers.forEach(container => {
+      const containerTop = container.getBoundingClientRect().top;
+  
+      if (containerTop < triggerBottom) {
+        container.classList.add('visible');
+      } else {
+        container.classList.remove('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+  
+  
+
