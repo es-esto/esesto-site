@@ -1,3 +1,49 @@
+
+window.addEventListener('scroll', function () {
+  const scrollLine = document.querySelector('.scroll-line');
+  const heroSection = document.getElementById('hero');
+  const rect = heroSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (rect.top < windowHeight && rect.bottom > 0) {
+    const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+    const percentage = visibleHeight / rect.height;
+    const height = rect.height * percentage;
+    scrollLine.style.height = `${height}px`;
+  } else {
+    scrollLine.style.height = `0px`;
+  }
+});
+
+// - - - - - - - - - - - - - - LOGO AND TEXT TRANSITION - - - - - - - - - - - - - - - - -
+
+
+document.addEventListener("scroll", () => {
+  const hero = document.querySelector(".hero");
+  const text = document.querySelector(".hero-text");
+  const lightLogo = document.querySelector(".logo-light");
+  const darkLogo = document.querySelector(".logo-dark");
+
+  const maxScroll = 200;
+  const scroll = Math.min(window.scrollY, maxScroll);
+  const percent = scroll / maxScroll;
+
+  // Background transition
+  const bgValue = Math.round(50 + (205 * percent));
+  hero.style.backgroundColor = `rgb(${bgValue}, ${bgValue}, ${bgValue})`;
+
+  // Text transition
+  const textValue = Math.round(255 - (205 * percent));
+  text.style.color = `rgb(${textValue}, ${textValue}, ${textValue})`;
+
+  // Logo transition
+  darkLogo.style.opacity = percent;
+  lightLogo.style.opacity = 1 - percent;
+});
+
+
+
+
 // - - - - - - - - - - - - - - FORM - - - - - - - - - - - - - - - - - - -
 
 function sendEmail() {
@@ -43,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// - - - - - - - - - - - - - - INTRO - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - PROCESS - - - - - - - - - - - - - - - - -
 
 const words = [
     { word: "Discover", desc: "Understand the problem through research and insights." },
